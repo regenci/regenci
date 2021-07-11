@@ -1,0 +1,26 @@
+{
+  "title": "Regenci | Create the best version of your resume",
+  "titleTemplate": "%s - Regenci",
+  "description": "Regenci resume builder - https://www.regenci.online",
+  "openGraph": {
+    "title": "Regenci | Create the best version of your resume",
+    "description": "Regenci resume builder website - https://www.regenci.online",
+    "type": "website",
+    "locale": "en_IE",
+    "url": "https://www.regenci.online",
+    "site_name": "Resume Agenci",
+    "images": [
+      {
+        "url": "/hero-regenci-screenshot.png",
+        "width": 800,
+        "height": 600,
+        "alt": "Regenci resume builder website"
+      }
+    ]
+  },
+  "twitter": {
+    "handle": "@nextjs",
+    "site": "@nextjs",
+    "cardType": "summary_large_image"
+  }
+}

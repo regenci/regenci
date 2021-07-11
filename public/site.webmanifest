@@ -1,0 +1,21 @@
+{
+  "icons": [
+    {
+      "src": "/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicons/android-chrome-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "name": "Regenci",
+  "theme_color": "#fff",
+  "display": "standalone",
+  "short_name": "Regenci",
+  "background_color": "#000000",
+  "description": "Regenci resume builder - https://www.regenci.online"
+}

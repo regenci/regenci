@@ -1,0 +1,23 @@
+/* Ant-design input field custom styling */
+body .auth-customized-form .ant-input-affix-wrapper {
+  border-radius: 0;
+}
+body .auth-customized-form .ant-input-affix-wrapper:hover {
+  border: 1px solid black;
+}
+body .auth-customized-form .ant-input-affix-wrapper:focus,
+body .auth-customized-form .ant-input-affix-wrapper:focused {
+  border-color: black !important;
+  box-shadow: unset !important;
+}
+body .auth-customized-form .ant-input-affix-wrapper:focus,
+body .auth-customized-form .ant-input-affix-wrapper-focused {
+  border-color: black !important;
+  box-shadow: unset !important;
+}
+body .custom-dashed-btn:focus,
+body .custom-dashed-btn:active,
+body .custom-dashed-btn:hover {
+  box-shadow: unset !important;
+  border-color: black !important;
+}

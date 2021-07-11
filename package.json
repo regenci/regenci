@@ -1,0 +1,84 @@
+{
+  "name": "regenci",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "check-types": "tsc --pretty --noEmit",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "format": "prettier --write .",
+    "test-all": "npm run check-format && npm run check-lint && npm run check-types && npm run build",
+    "prepare": "husky install"
+  },
+  "sideEffects": false,
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.x"
+  },
+  "dependencies": {
+    "antd": "^4.16.5",
+    "framer-motion": "^4.1.17",
+    "js-cookie": "^2.2.1",
+    "nanoid": "^3.1.23",
+    "next": "11.0.1",
+    "next-seo": "^4.26.0",
+    "next-themes": "^0.0.15",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-redux": "^7.2.4",
+    "react-responsive": "^8.2.0",
+    "redux": "^4.1.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/antd": "^1.0.0",
+    "@types/js-cookie": "^2.2.7",
+    "@types/nanoid": "^3.0.0",
+    "@types/react": "17.0.11",
+    "@types/react-dom": "^17.0.8",
+    "@types/react-responsive": "^8.0.2",
+    "@types/redux": "^3.6.0",
+    "@types/redux-thunk": "^2.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "autoprefixer": "^10.2.6",
+    "eslint": ">=5.16.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-next": "11.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.24.0",
+    "husky": "^7.0.0",
+    "postcss": "^8.3.5",
+    "prettier": "^2.3.2",
+    "tailwind-styled-components": "^2.0.3",
+    "tailwindcss": "^2.2.4",
+    "typescript": "4.3.4"
+  },
+  "next-unused": {
+    "alias": {
+      "@lib/*": [
+        "lib/*"
+      ],
+      "@assets/*": [
+        "assets/*"
+      ],
+      "@config/*": [
+        "config/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ]
+    },
+    "include": [
+      "components",
+      "lib",
+      "pages"
+    ],
+    "exclude": [],
+    "entrypoints": [
+      "pages"
+    ]
+  }
+}
