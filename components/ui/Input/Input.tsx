@@ -21,7 +21,8 @@ interface IInputProps {
   is_password_field?: boolean;
   field_dependency?: NamePath[];
   field_rules?: IRuleGetterProps;
-  field_type: "number" | "text" | "password" | "date";
+  field_type: "number" | "text" | "password" | "date" | "hidden";
+  field_default_value?: any;
 }
 
 const Input: React.FunctionComponent<IInputProps> = (props) => {
@@ -52,7 +53,14 @@ const Input: React.FunctionComponent<IInputProps> = (props) => {
   }, [props?.field_rules]);
 
   return (
-    <Form.Item name={props.field_name} rules={rules && rules.map((r) => r)} style={{ marginBottom: 10 }} dependencies={props.field_dependency} label={props.field_label}>
+    <Form.Item
+      name={props.field_name}
+      rules={rules && rules.map((r) => r)}
+      style={{ marginBottom: 10 }}
+      dependencies={props.field_dependency}
+      label={props.field_label}
+      initialValue={props?.field_default_value}
+    >
       {props.is_password_field ? (
         <AntInput.Password
           prefix={props.field_icon && <props.field_icon className="opacity-80" />}

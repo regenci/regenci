@@ -1,9 +1,9 @@
 import React from "react";
 import { MotionLayoutComponent } from "@components/common";
-import { PersonalDrawer } from "@components/builder/drawers";
 import { templateRenderer } from "@components/templates/renderer";
 import { resumeTemplateConfig } from "@components/builder/resume-template-config";
 import { TWBuilderPreviewContainerComponent } from "@components/common/Layout/layout-tw-styled";
+import { EducationDrawer, ExperienceDrawer, PersonalDrawer } from "@components/builder/drawers";
 
 export default function Builder() {
   // const handleSidebarMenuClicked = (value: string) => {
@@ -49,6 +49,8 @@ export default function Builder() {
   return (
     <>
       <PersonalDrawer />
+      <EducationDrawer />
+      <ExperienceDrawer />
       <MotionLayoutComponent className="flex justify-center items-center" variants={variants} bg="black" title="App | Resume Builder">
         <TWBuilderPreviewContainerComponent>{templateRenderer(resumeTemplateConfig)}</TWBuilderPreviewContainerComponent>
       </MotionLayoutComponent>

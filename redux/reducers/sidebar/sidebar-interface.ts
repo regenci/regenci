@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-export type actionType =
+export type sidebarActionType =
   | "TOGGLE_SIDEBAR_TEMPLATES"
   | "TOGGLE_SIDEBAR_EDUCATION"
   | "TOGGLE_SIDEBAR_EXPERIENCE"
@@ -9,7 +9,7 @@ export type actionType =
   | "TOGGLE_SIDEBAR_SKILL";
 
 export interface ISidebarAction {
-  type: actionType;
+  type: sidebarActionType;
   payload: boolean;
 }
 

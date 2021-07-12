@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { useMediaQuery } from "react-responsive";
-import { Drawer as AntDrawer, Button } from "antd";
 import { useDispatch } from "react-redux";
+import { Drawer as AntDrawer } from "antd";
+import { useMediaQuery } from "react-responsive";
 
 interface IProps {
   close: any;
@@ -21,28 +21,7 @@ const Drawer: React.FC<IProps> = (props) => {
     props.close(false, dispatch);
   };
   return (
-    <AntDrawer
-      title={props.title}
-      placement={props.placement}
-      closable={false}
-      onClose={handleClose}
-      visible={props.visible}
-      width={sm ? "100%" : props.width}
-      footer={
-        <div
-          style={{
-            textAlign: "right",
-          }}
-        >
-          <Button onClick={handleClose} style={{ marginRight: 8 }}>
-            Cancel
-          </Button>
-          <Button onClick={handleClose} type="primary">
-            Save
-          </Button>
-        </div>
-      }
-    >
+    <AntDrawer title={props.title} placement={props.placement} closable={false} onClose={handleClose} visible={props.visible} width={sm ? "100%" : props.width} footer={null}>
       {props.content}
     </AntDrawer>
   );

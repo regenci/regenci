@@ -1,10 +1,9 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
-import { Tabs, Form } from "antd";
-import EditorEducationDataForm from "./education-form";
+/* eslint-disable react/prop-types */
+import { Tabs as AntTabs } from "antd";
 import { nanoid } from "nanoid";
+import React from "react";
 
-const { TabPane } = Tabs;
+const { TabPane } = AntTabs;
 
 interface IPane {
   title: string;
@@ -12,14 +11,21 @@ interface IPane {
   key: string;
 }
 
-const EducationDataEditorContent = () => {
+interface IProps {
+  content: JSX.Element;
+  tabTitle: string;
+  setTabId: (value: string) => void;
+}
+
+const Tabs: React.FC<IProps> = (props) => {
   const initialValues = [
     {
-      title: "Education",
-      content: <EditorEducationDataForm />,
+      title: props.tabTitle,
+      content: props.content,
       key: nanoid(),
     },
   ];
+
   const [activeKey, setActiveKey] = React.useState(initialValues[0].key);
   const [panes, setPanes] = React.useState<IPane[]>(initialValues);
 
@@ -27,24 +33,24 @@ const EducationDataEditorContent = () => {
     setActiveKey(activeKey);
   };
 
-  const onEdit = (targetKey: any, action: any) => {
+  const onEdit = (targetKey: any, action: "add" | "remove") => {
     action === "add" ? add() : remove(targetKey);
   };
-  console.log(panes);
 
   const add = () => {
     const activeKey = nanoid();
     const newPanes = [...panes];
     newPanes.push({
-      title: "Education",
-      content: <EditorEducationDataForm />,
+      title: props.tabTitle,
+      content: props.content,
       key: activeKey,
     });
     setPanes(newPanes);
     setActiveKey(activeKey);
+    props.setTabId(activeKey);
   };
 
-  const remove = (targetKey: string) => {
+  const remove = (targetKey: any) => {
     let newActiveKey = activeKey;
     let lastIndex;
     panes.forEach((pane, i) => {
@@ -61,20 +67,19 @@ const EducationDataEditorContent = () => {
       }
     }
     setPanes(newPanes);
+    props.setTabId(targetKey);
     setActiveKey(newActiveKey);
   };
+
   return (
-    <Form onFinish={(values) => console.log(values)}>
-      <Tabs type="editable-card" onChange={onChange} activeKey={activeKey} onEdit={onEdit} size="small">
-        {panes.map((pane) => (
-          <TabPane tab={pane.title} key={pane.key} closable>
-            {pane.content}
-          </TabPane>
-        ))}
-      </Tabs>
-      <button type="submit">submit</button>
-    </Form>
+    <AntTabs type="editable-card" onChange={onChange} activeKey={activeKey} onEdit={onEdit} size="small">
+      {panes.map((pane) => (
+        <TabPane tab={pane.title} key={pane.key} closable>
+          {pane.content}
+        </TabPane>
+      ))}
+    </AntTabs>
   );
 };
 
-export default EducationDataEditorContent;
+export default Tabs;
