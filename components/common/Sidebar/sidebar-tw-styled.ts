@@ -19,6 +19,7 @@ export const TWSidebarComponent = tw.div`
     sm:z-20
     sm:w-full
     sm:flex-row
+    sm:overflow-x-scroll
     z-20
 `;
 export const TWSidebarLogoComponent = tw.h1`
@@ -42,24 +43,4 @@ export const TWSidebarLinkComponent = tw.div`
     mx-0
     sm:my-0
     sm:mx-5
-`;
-
-export const TWBuilderSidebarComponent = tw.div`
-    flex
-    w-16
-    flex-col
-    relative
-    bg-black
-    text-white
-    items-center
-    min-h-screen
-    justify-start
-    pt-12
-    pb-12
-    sm:min-h-0
-    sm:p-5
-    sm:z-20
-    sm:w-full
-    sm:flex-row
-    z-20
 `;

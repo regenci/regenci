@@ -1,52 +1,44 @@
-import {
-  TOGGLE_SIDEBAR_EDUCATION,
-  TOGGLE_SIDEBAR_EXPERIENCE,
-  TOGGLE_SIDEBAR_LANGUAGE,
-  TOGGLE_SIDEBAR_LINKS,
-  TOGGLE_SIDEBAR_PERSONAL_DATA,
-  TOGGLE_SIDEBAR_SKILL,
-  TOGGLE_SIDEBAR_TEMPLATES,
-} from "@store/redux-types/sidebar-types";
+import { TOGGLE_EDUCATION, TOGGLE_EXPERIENCE, TOGGLE_LANGUAGE, TOGGLE_REFERRENCES, TOGGLE_PERSONAL_DATA, TOGGLE_SKILL, TOGGLE_TEMPLATES } from "@store/redux-types/sidebar-types";
 
+export const togglePersonalAction = (state: boolean, dispatch: any) => {
+  return dispatch({
+    type: TOGGLE_PERSONAL_DATA,
+    payload: state,
+  });
+};
 export const toggleEducationAction = (state: boolean, dispatch: any) => {
   return dispatch({
-    type: TOGGLE_SIDEBAR_EDUCATION,
+    type: TOGGLE_EDUCATION,
     payload: state,
   });
 };
 export const toggleExperienceAction = (state: boolean, dispatch: any) => {
   return dispatch({
-    type: TOGGLE_SIDEBAR_EXPERIENCE,
+    type: TOGGLE_EXPERIENCE,
+    payload: state,
+  });
+};
+export const toggleReferrencesAction = (state: boolean, dispatch: any) => {
+  return dispatch({
+    type: TOGGLE_REFERRENCES,
     payload: state,
   });
 };
 export const toggleLanguagesAction = (state: boolean, dispatch: any) => {
   return dispatch({
-    type: TOGGLE_SIDEBAR_LANGUAGE,
-    payload: state,
-  });
-};
-export const toggleLinksAction = (state: boolean, dispatch: any) => {
-  return dispatch({
-    type: TOGGLE_SIDEBAR_LINKS,
-    payload: state,
-  });
-};
-export const togglePersonalAction = (state: boolean, dispatch: any) => {
-  return dispatch({
-    type: TOGGLE_SIDEBAR_PERSONAL_DATA,
+    type: TOGGLE_LANGUAGE,
     payload: state,
   });
 };
 export const toggleSkillAction = (state: boolean, dispatch: any) => {
   return dispatch({
-    type: TOGGLE_SIDEBAR_SKILL,
+    type: TOGGLE_SKILL,
     payload: state,
   });
 };
 export const toggleTemplatesAction = (state: boolean, dispatch: any) => {
   return dispatch({
-    type: TOGGLE_SIDEBAR_TEMPLATES,
+    type: TOGGLE_TEMPLATES,
     payload: state,
   });
 };

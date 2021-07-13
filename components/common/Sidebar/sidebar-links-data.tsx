@@ -1,5 +1,6 @@
+import { ISidebarState } from "@store/reducers/sidebar/sidebar-interface";
 import { EducationIcon, ExperienceIcon, HomeIcon, LinkIcon, ProfileIcon, QuestionCircleIcon, TagIcon, TemplateIcon, TranslateIcon } from "@components/Icons";
-import { toggleEducationAction, toggleExperienceAction, toggleLanguagesAction, toggleLinksAction, togglePersonalAction, toggleSkillAction, toggleTemplatesAction } from "@store/actions/sidebar";
+import { toggleEducationAction, toggleExperienceAction, toggleLanguagesAction, toggleReferrencesAction, togglePersonalAction, toggleSkillAction, toggleTemplatesAction } from "@store/actions/sidebar";
 
 export const sidebarLinks = [
   {
@@ -18,47 +19,54 @@ export const sidebarLinks = [
     icon: QuestionCircleIcon,
   },
 ];
-export const sidebarBuilderLinks = [
+export const sidebarBuilderLinks = (state: ISidebarState) => [
   {
     link: undefined,
     icon: TemplateIcon,
     tooltip: "Templates",
     action: toggleTemplatesAction,
+    toggled: state.templates,
   },
   {
     link: undefined,
     icon: ProfileIcon,
-    tooltip: "Edit personal data",
+    tooltip: "Manage personal data",
     action: togglePersonalAction,
+    toggled: state.personal,
   },
   {
     link: undefined,
     icon: EducationIcon,
-    tooltip: "Edit education data",
+    tooltip: "Manage education data",
     action: toggleEducationAction,
+    toggled: state.education,
   },
   {
     link: undefined,
     icon: ExperienceIcon,
-    tooltip: "Edit experience data",
+    tooltip: "Manage experience data",
     action: toggleExperienceAction,
+    toggled: state.experience,
   },
   {
     link: undefined,
     icon: LinkIcon,
-    tooltip: "Edit referrence data",
-    action: toggleLinksAction,
+    tooltip: "Manage referrence data",
+    action: toggleReferrencesAction,
+    toggled: state.referrences,
   },
   {
     link: undefined,
     icon: TranslateIcon,
-    tooltip: "Edit language data",
+    tooltip: "Manage language data",
     action: toggleLanguagesAction,
+    toggled: state.languages,
   },
   {
     link: undefined,
     icon: TagIcon,
-    tooltip: "Edit skills data",
+    tooltip: "Manage skills data",
     action: toggleSkillAction,
+    toggled: state.skills,
   },
 ];

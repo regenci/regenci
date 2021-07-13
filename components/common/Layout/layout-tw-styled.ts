@@ -47,9 +47,13 @@ export const TWBuilderPreviewContainerComponent = tw.div`
     max-h-1000
     h-6/7
     bg-white
-    overflow-y-scroll
     border-[1px]
     border-white
+    sm:overflow-hidden
+    sm:w-full
+    sm:mx-3
+    xm:h-[500px]
+    xm:max-h-[500px]
 `;
 
 export const TWBuilderSidebarLinkComponent = tw.div`

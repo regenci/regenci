@@ -5,10 +5,9 @@ import { Drawer, DynamicForm } from "@components/ui";
 import { toggleExperienceAction } from "@store/actions/sidebar";
 
 const ExperienceDataDrawer = () => {
-  const state = useSelector((state: IRootState) => state.sidebar.toggle_experience);
-  console.log(state);
+  const toggled = useSelector((state: IRootState) => state.sidebar.experience);
 
-  return <Drawer placement="right" title="Your experience details here" width="700px" visible={state} close={toggleExperienceAction} content={<DynamicForm form_name="experience" />} />;
+  return <Drawer placement="right" title="Your experience details here" width="700px" visible={toggled} close={toggleExperienceAction} content={<DynamicForm form_name="experience" />} />;
 };
 
 export default ExperienceDataDrawer;

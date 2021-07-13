@@ -1,8 +1,9 @@
 /* eslint-disable camelcase */
 /* eslint-disable new-cap */
 import React from "react";
-import { Row, Col, Form, Button } from "antd";
+import { nanoid } from "nanoid";
 import { PlusIcon } from "@components/Icons";
+import { Row, Col, Form, Button } from "antd";
 import { formNameType, getDynamicFormFields } from "./dynamic-fields-getter";
 
 interface IProps {
@@ -12,7 +13,7 @@ interface IProps {
 
 const DynamicForm = (props: IProps) => {
   const [loading, setLoading] = React.useState(false);
-  const [formChanged, setFormChanged] = React.useState(false);
+  const [formChanged, setFormChanged] = React.useState(true);
   const onFinish = async (values: any) => {
     setLoading(true);
     (await values) &&
@@ -24,16 +25,16 @@ const DynamicForm = (props: IProps) => {
   };
 
   return (
-    <Form name={props.form_name + "regenci_dynamic_form"} onFinish={onFinish} autoComplete="off" layout="vertical" onValuesChange={() => setFormChanged(false)}>
+    <Form name={nanoid()} onFinish={onFinish} autoComplete="off" className="w-full flex items-center flex-col" layout="vertical" onValuesChange={() => setFormChanged(false)}>
       <Form.List name="education">
         {(fields, { add, remove }) => (
           <>
             {fields.map(({ key, name, fieldKey, ...restField }) => getDynamicFormFields(key, fieldKey, name, restField, remove, props.form_name))}
-            <Row gutter={24} className="w-[95%] mt-2 mb-4">
-              <Col span={24}>
+            <Row gutter={24} className="w-full mt-2 mb-4">
+              <Col span={24} className="w-full">
                 <Button type="dashed" onClick={() => add()} className="w-full">
                   <div className="flex w-full justify-center items-center">
-                    <PlusIcon className="w-4 h-4 mr-1" /> <span>Add one more</span>
+                    <PlusIcon className="w-4 h-4 mr-1" /> <span>Add more</span>
                   </div>
                 </Button>
               </Col>
@@ -41,7 +42,7 @@ const DynamicForm = (props: IProps) => {
           </>
         )}
       </Form.List>
-      <Row gutter={24} className="w-[95%] mt-2 mb-4">
+      <Row gutter={24} className="w-full mt-2 mb-4">
         <Col span={24}>
           <Button type="primary" htmlType="submit" loading={loading} disabled={formChanged} className="w-full">
             Save progress

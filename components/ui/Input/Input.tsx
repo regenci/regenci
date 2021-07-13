@@ -31,6 +31,7 @@ const Input: React.FunctionComponent<IInputProps> = (props) => {
     data?.min ? { min: data.min, message: `This field must be at least ${data.min} characters long.` } : null,
     data?.required ? { required: data.required, message: "This field is required, please complete it." } : null,
     data?.max ? { max: data.max, message: `This field should not be longer than ${data.max} characters.` } : null,
+    data?.type === "url" ? { type: "url", message: "Please verify your input, the field must be a valid url." } : null,
     data?.type === "numeric" ? { pattern: /^(?:\d*)$/, message: "Please verify your input, the field is numeric only." } : null,
     data?.type === "email" ? { type: "email", message: "Please enter your email address in format: yourname@example.com" } : null,
     data?.type === "letter_spaces" ? { pattern: /^[a-zA-Z ]*$/, message: "Your input should contain only letters and spaces." } : null,

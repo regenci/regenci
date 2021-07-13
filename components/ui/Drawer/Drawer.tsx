@@ -3,6 +3,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Drawer as AntDrawer } from "antd";
 import { useMediaQuery } from "react-responsive";
+import { CloseIcon } from "@components/Icons";
 
 interface IProps {
   close: any;
@@ -11,6 +12,7 @@ interface IProps {
   visible: boolean;
   content: JSX.Element;
   placement: "right" | "left";
+  className?: string;
 }
 
 const Drawer: React.FC<IProps> = (props) => {
@@ -21,7 +23,17 @@ const Drawer: React.FC<IProps> = (props) => {
     props.close(false, dispatch);
   };
   return (
-    <AntDrawer title={props.title} placement={props.placement} closable={false} onClose={handleClose} visible={props.visible} width={sm ? "100%" : props.width} footer={null}>
+    <AntDrawer
+      title={props.title}
+      className={props?.className}
+      placement={props.placement}
+      closable={true}
+      closeIcon={<CloseIcon />}
+      onClose={handleClose}
+      visible={props.visible}
+      width={sm ? "100%" : props.width}
+      footer={null}
+    >
       {props.content}
     </AntDrawer>
   );

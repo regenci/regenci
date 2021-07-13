@@ -5,9 +5,9 @@ import { Drawer, DynamicForm } from "@components/ui";
 import { toggleEducationAction } from "@store/actions/sidebar";
 
 const EducationDataDrawer = () => {
-  const state = useSelector((state: IRootState) => state.sidebar.toggle_education);
+  const toggled = useSelector((state: IRootState) => state.sidebar.education);
 
-  return <Drawer placement="right" title="Your education details here" width="700px" visible={state} close={toggleEducationAction} content={<DynamicForm form_name="education" />} />;
+  return <Drawer placement="right" title="Your education details here" width="700px" visible={toggled} close={toggleEducationAction} content={<DynamicForm form_name="education" />} />;
 };
 
 export default EducationDataDrawer;
