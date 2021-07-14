@@ -25,6 +25,7 @@
     "next": "11.0.1",
     "next-seo": "^4.26.0",
     "next-themes": "^0.0.15",
+    "pietile-carousel": "^3.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-redux": "^7.2.4",

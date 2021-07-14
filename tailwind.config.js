@@ -7,31 +7,6 @@ module.exports = {
       fontSize: {
         xxs: "10px",
       },
-      dropShadow: {
-        cstm: "1px 2px 4px white",
-      },
-      width: {
-        250: "250px",
-        500: "500px",
-        550: "550px",
-        600: "600px",
-        700: "700px",
-        1000: "1000px",
-      },
-      height: {
-        350: "350px",
-        500: "500px",
-        600: "600px",
-        1000: "1000px",
-        "6/7": "95%",
-      },
-      maxHeight: {
-        1000: "1000px",
-        2000: "2000px",
-      },
-      rounded: {
-        20: "20px",
-      },
       cursor: {
         grab: "grab",
         grabbing: "grabbing",

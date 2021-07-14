@@ -13,6 +13,7 @@ interface IProps {
   };
   children: ReactNode;
   className?: string;
+  animate?: string;
 }
 
 function MotionLayoutComponent(props: IProps): ReactElement {
@@ -22,17 +23,7 @@ function MotionLayoutComponent(props: IProps): ReactElement {
       <Head>
         <title>Regenci - {props.title}</title>
       </Head>
-      <Custom
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        transition={{
-          duration: 0.6,
-          delay: 0,
-        }}
-        variants={props.variants}
-        className={props.className}
-      >
+      <Custom initial="initial" animate={props?.animate || "animate"} exit="exit" variants={props.variants} className={props.className}>
         {props.children}
       </Custom>
     </>

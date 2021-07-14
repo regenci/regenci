@@ -4,6 +4,8 @@ import tw from "tailwind-styled-components";
 export const TWSidebarComponent = tw.div`
     flex
     w-20
+    min-w-[5rem]
+    sm:min-w-[unset]
     flex-col
     relative
     bg-black
