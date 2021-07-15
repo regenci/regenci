@@ -5,9 +5,12 @@ import { TWCarouselContainerComponent, TWCarouselImageWrapper } from "./carousel
 import { useMediaQuery } from "react-responsive";
 import React from "react";
 import { motion } from "framer-motion";
-import { setLocalStorage } from "@lib/localStorage";
 
-const Carousel = () => {
+interface IProps {
+  setSelected: (value?: number) => void;
+}
+
+const Carousel = (props: IProps) => {
   // const lg = useMediaQuery({ minWidth: 1000 });
   const md = useMediaQuery({ maxWidth: 1000 });
   const sm = useMediaQuery({ maxWidth: 780 });
@@ -46,7 +49,7 @@ const Carousel = () => {
     <MotionContainer variants={variants}>
       <PietileCarousel count={xm ? 1 : sm ? 2 : md ? 3 : 5} className="flex-1 cursor-grab active:cursor-grabbing py-10">
         {slides.map((slide, i) => (
-          <MotionSlide key={i} whileTap={{ scale: 1.2 }} onDoubleClick={() => setLocalStorage("_curr_selected_template", i + 1)}>
+          <MotionSlide key={i} whileTap={{ scale: 1.2 }} onDoubleClick={() => props.setSelected(i + 1)}>
             <Image width={250} height={350} src={slide} alt={slide} quality={100} objectFit="fill" draggable={false} />
           </MotionSlide>
         ))}

@@ -1,20 +1,25 @@
 /* eslint-disable camelcase */
 import React, { ReactNode } from "react";
 import { ButtonHTMLAttributes } from "react";
-import { TWButtonComponent } from "./button-tw-styled";
+import { TWBlackButtonComponent, TWWhiteButtonComponent } from "./button-tw-styled";
 
 interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   type?: "submit" | "reset" | "button" | undefined;
   className?: string;
   children: ReactNode;
   style?: React.CSSProperties | undefined;
+  bgType: "white" | "black";
 }
 
 const Button = (props: IProps) => {
-  return (
-    <TWButtonComponent type={props?.type} style={props?.style} className={props?.className} {...props}>
+  return props.bgType === "white" ? (
+    <TWBlackButtonComponent type={props?.type} style={props?.style} className={props?.className} {...props}>
       {props.children}
-    </TWButtonComponent>
+    </TWBlackButtonComponent>
+  ) : (
+    <TWWhiteButtonComponent type={props?.type} style={props?.style} className={props?.className} {...props}>
+      {props.children}
+    </TWWhiteButtonComponent>
   );
 };
 

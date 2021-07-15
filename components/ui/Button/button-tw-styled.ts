@@ -1,6 +1,6 @@
 import tw from "tailwind-styled-components";
 
-export const TWButtonComponent = tw.button`
+export const TWBlackButtonComponent = tw.button`
     w-full
     py-1.5
     bg-black
@@ -9,6 +9,28 @@ export const TWButtonComponent = tw.button`
     hover:text-black
     hover:border-black
     border-black
+    rounded-none
+    transition-all
+    duration-300
+    flex
+    justify-center
+    items-center
+    text-sm
+    border-2
+    tracking-widest
+    font-normal
+    capitalize
+    outline-none
+`;
+export const TWWhiteButtonComponent = tw.button`
+    w-full
+    py-1.5
+    bg-white
+    text-black
+    hover:bg-black
+    hover:text-white
+    hover:border-white
+    border-white
     rounded-none
     transition-all
     duration-300

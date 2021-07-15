@@ -20,7 +20,7 @@ const Layout = (props: AppProps) => {
         title="This site uses cookies to improve your experience. By clicking, you agree to our Privacy Policy."
         hide={acceptedCookies}
         action={
-          <Button className="w-[300px]" onClick={() => onAcceptCookies()}>
+          <Button className="w-[300px]" bgType="white" onClick={() => onAcceptCookies()}>
             Accept cookies
           </Button>
         }

@@ -31,7 +31,9 @@ const Form = (props: IProps) => {
           </AntForm.Item>
         )}
         <AntForm.Item>
-          <Button type="submit">{props.submit_btn_title}</Button>
+          <Button type="submit" bgType="white">
+            {props.submit_btn_title}
+          </Button>
         </AntForm.Item>
       </AntForm>
       {props.is_auth_form && <FormSocial form_title={props.form_title} />}
