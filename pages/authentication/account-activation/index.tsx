@@ -62,24 +62,24 @@ export default function AccountActivation() {
   //     });
   //   }, []);
 
-  const variants = {
-    initial: {
-      y: "-100%",
-    },
-    animate: {
-      y: 0,
-    },
-    exit: {
-      y: "100%",
-    },
-  };
+  // const variants = {
+  //   initial: {
+  //     y: "-100%",
+  //   },
+  //   animate: {
+  //     y: 0,
+  //   },
+  //   exit: {
+  //     y: "100%",
+  //   },
+  // };
 
   const handleFormSubmit = async (values: any) => {
     // await resetConfirmAction({ code: value, _id: decoded?._id }, router);
   };
 
   return (
-    <MotionLayoutComponent className="flex justify-center items-center" variants={variants} bg="white" title="Authentication | Account Activation">
+    <MotionLayoutComponent title="Authentication | Account Activation">
       <Form
         is_auth_form={false}
         submit_btn_title="Activate"

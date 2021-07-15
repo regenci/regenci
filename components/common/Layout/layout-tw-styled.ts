@@ -9,17 +9,16 @@ export const TWLayoutComponent = tw.div`
     sm:flex-col-reverse
     sm:justify-between
     overflow-hidden
+    bg-black
 `;
 
-export const TWMotionBlackPageComponent = tw.div`
+export const TWMotionPageComponent = tw.div`
+    flex
     flex-1
     h-full
     bg-black
-`;
-export const TWMotionWhitePageComponent = tw.div`
-    flex-1
-    h-full
-    bg-white
+    items-center
+    justify-center 
 `;
 
 // Builder

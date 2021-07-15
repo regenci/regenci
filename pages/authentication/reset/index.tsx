@@ -4,17 +4,17 @@ import { MotionLayoutComponent } from "@components/common";
 import { PasswordIcon } from "@components/Icons";
 
 export default function Reset() {
-  const variants = {
-    initial: {
-      y: "-100%",
-    },
-    animate: {
-      y: 0,
-    },
-    exit: {
-      y: "100%",
-    },
-  };
+  // const variants = {
+  //   initial: {
+  //     y: "-100%",
+  //   },
+  //   animate: {
+  //     y: 0,
+  //   },
+  //   exit: {
+  //     y: "100%",
+  //   },
+  // };
 
   const handleFormSubmit = async (values: any) => {
     // try {
@@ -27,7 +27,7 @@ export default function Reset() {
   };
 
   return (
-    <MotionLayoutComponent className="flex justify-center items-center" variants={variants} bg="white" title="Authentication | Reset Password">
+    <MotionLayoutComponent title="Authentication | Reset Password">
       <Form
         is_auth_form={false}
         has_forgot_link={false}

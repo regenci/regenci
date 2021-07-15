@@ -2,29 +2,29 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MotionLayoutComponent } from "@components/common";
 
-const variants = {
-  initial: {
-    y: "100%",
-    transition: {
-      delay: 0,
-      duration: 0.6,
-    },
-  },
-  animate: {
-    y: 0,
-    transition: {
-      delay: 0,
-      duration: 0.6,
-    },
-  },
-  exit: {
-    y: "100%",
-    transition: {
-      delay: 0.6,
-      duration: 0.6,
-    },
-  },
-};
+// const variants = {
+//   initial: {
+//     y: "100%",
+//     transition: {
+//       delay: 0,
+//       duration: 0.6,
+//     },
+//   },
+//   animate: {
+//     y: 0,
+//     transition: {
+//       delay: 0,
+//       duration: 0.6,
+//     },
+//   },
+//   exit: {
+//     y: "100%",
+//     transition: {
+//       delay: 0.6,
+//       duration: 0.6,
+//     },
+//   },
+// };
 const textVariants = {
   initial: {
     y: -1000,
@@ -53,8 +53,8 @@ const textVariants = {
 };
 export default function Home() {
   return (
-    <MotionLayoutComponent title="Create The Best Version Of Your Resume" bg="black" className="flex justify-center items-center" variants={variants}>
-      <motion.h1 variants={textVariants} className="text-white text-[200px]">
+    <MotionLayoutComponent title="Create The Best Version Of Your Resume">
+      <motion.h1 variants={textVariants} className="text-white text-[200px] sm:text-5xl sm:w-full sm:text-center">
         Regenci
       </motion.h1>
     </MotionLayoutComponent>

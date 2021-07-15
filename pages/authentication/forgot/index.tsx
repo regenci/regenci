@@ -8,23 +8,23 @@ export default function Forgot() {
   // const router = useRouter();
   // const dispatch = useDispatch();
 
-  const variants = {
-    initial: {
-      y: "-100%",
-    },
-    animate: {
-      y: 0,
-    },
-    exit: {
-      y: "100%",
-    },
-  };
+  // const variants = {
+  //   initial: {
+  //     y: "-100%",
+  //   },
+  //   animate: {
+  //     y: 0,
+  //   },
+  //   exit: {
+  //     y: "100%",
+  //   },
+  // };
 
   const handleFormSubmit = async (values: any) => {
     // await forgotPasswordAction(value, dispatch, router);
   };
   return (
-    <MotionLayoutComponent className="flex items-center justify-center" variants={variants} bg="white" title="Authentication | Forgot Password">
+    <MotionLayoutComponent title="Authentication | Forgot Password">
       <Form
         form_title="Recover Account"
         is_auth_form={false}

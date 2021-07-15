@@ -15,24 +15,24 @@ export default function ForgotConfirm() {
   //     );
   // }, [token]);
 
-  const variants = {
-    initial: {
-      y: "-100%",
-    },
-    animate: {
-      y: 0,
-    },
-    exit: {
-      y: "100%",
-    },
-  };
+  // const variants = {
+  //   initial: {
+  //     y: "-100%",
+  //   },
+  //   animate: {
+  //     y: 0,
+  //   },
+  //   exit: {
+  //     y: "100%",
+  //   },
+  // };
 
   const handleFormSubmit = async (values: any) => {
     // await resetConfirmAction({ code: value, _id: decoded?._id }, router);
   };
 
   return (
-    <MotionLayoutComponent className="flex justify-center items-center" variants={variants} bg="white" title="Authentication | Confirm Code">
+    <MotionLayoutComponent title="Authentication | Confirm Code">
       <Form
         is_auth_form={false}
         has_forgot_link={false}

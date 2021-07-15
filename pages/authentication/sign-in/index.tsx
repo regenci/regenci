@@ -8,17 +8,17 @@ export default function Signin() {
   // const router = useRouter();
   // const dispatch = useDispatch();
 
-  const variants = {
-    initial: {
-      x: "100%",
-    },
-    animate: {
-      x: 0,
-    },
-    exit: {
-      x: "100%",
-    },
-  };
+  // const variants = {
+  //   initial: {
+  //     x: "100%",
+  //   },
+  //   animate: {
+  //     x: 0,
+  //   },
+  //   exit: {
+  //     x: "100%",
+  //   },
+  // };
 
   const handleFormSubmit = async (values: any) => {
     // await loginAction(values, router);
@@ -26,7 +26,7 @@ export default function Signin() {
     // if (getLocalStorage("temp_email")) removeLocalStorage("temp_email");
   };
   return (
-    <MotionLayoutComponent className="flex items-center justify-center" variants={variants} bg="white" title="Authentication | Sign in">
+    <MotionLayoutComponent title="Authentication | Sign in">
       <Form
         form_title="Sign In"
         has_forgot_link

@@ -3,18 +3,20 @@ import React from "react";
 import { Button } from "@components/ui";
 import type { AppProps } from "next/app";
 import { Sidebar } from "@components/common";
-import { AnimatePresence } from "framer-motion";
 import { FeatureBar } from "@components/common";
 import { TWLayoutComponent } from "./layout-tw-styled";
+import { AnimatePresence, motion } from "framer-motion";
 import { useAcceptCookies } from "@lib/hooks/useAcceptCookies";
 
 const Layout = (props: AppProps) => {
   const { acceptedCookies, onAcceptCookies } = useAcceptCookies();
   return (
-    <TWLayoutComponent className={window.location.pathname.startsWith("/authentication") ? "bg-black" : "bg-white"}>
+    <TWLayoutComponent>
       <Sidebar />
       <AnimatePresence exitBeforeEnter>
-        <props.Component {...props.pageProps} key={props.router.route} />
+        <motion.div initial="initial" animate="animate" exit="exit" key={props.router.route} className="w-full h-full">
+          <props.Component {...props.pageProps} key={props.router.route} />
+        </motion.div>
       </AnimatePresence>
       <FeatureBar
         title="This site uses cookies to improve your experience. By clicking, you agree to our Privacy Policy."

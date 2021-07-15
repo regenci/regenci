@@ -1,10 +1,10 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { MotionLayoutComponent } from "@components/common";
 import { templateRenderer } from "@components/templates/renderer";
 import { resumeTemplateConfig } from "@components/builder/resume-template-config";
 import { TWBuilderPreviewContainerComponent } from "@components/common/Layout/layout-tw-styled";
 import { EducationDrawer, ExperienceDrawer, LanguagesDrawer, PersonalDrawer, ReferrencesDrawer, SkillsDrawer, TemplatesDrawer } from "@components/builder/drawers";
-import { motion } from "framer-motion";
 
 export default function Builder() {
   // const handleSidebarMenuClicked = (value: string) => {
@@ -37,29 +37,29 @@ export default function Builder() {
   //       customContent;
   // }, []);
   const MotionPreviewContainer = motion(TWBuilderPreviewContainerComponent);
-  const variants = {
-    initial: {
-      y: "-100%",
-      transition: {
-        delay: 0,
-        duration: 0.6,
-      },
-    },
-    animate: {
-      y: 0,
-      transition: {
-        delay: 0,
-        duration: 0.6,
-      },
-    },
-    exit: {
-      y: "100%",
-      transition: {
-        delay: 1,
-        duration: 0.6,
-      },
-    },
-  };
+  // const variants = {
+  //   initial: {
+  //     y: "-100%",
+  //     transition: {
+  //       delay: 0,
+  //       duration: 0.6,
+  //     },
+  //   },
+  //   animate: {
+  //     y: 0,
+  //     transition: {
+  //       delay: 0,
+  //       duration: 0.6,
+  //     },
+  //   },
+  //   exit: {
+  //     y: "100%",
+  //     transition: {
+  //       delay: 1,
+  //       duration: 0.6,
+  //     },
+  //   },
+  // };
   const previewVariants = {
     initial: {
       y: 2000,
@@ -95,7 +95,7 @@ export default function Builder() {
       <TemplatesDrawer />
       <ExperienceDrawer />
       <ReferrencesDrawer />
-      <MotionLayoutComponent className="flex justify-center items-center" variants={variants} bg="black" title="App | Resume Builder">
+      <MotionLayoutComponent title="App | Resume Builder">
         <MotionPreviewContainer variants={previewVariants} className="builder-preview-container">
           {templateRenderer(resumeTemplateConfig)}
         </MotionPreviewContainer>

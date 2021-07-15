@@ -5,17 +5,17 @@ import { MotionLayoutComponent } from "@components/common";
 import { EmailIcon, PasswordIcon, UserIcon } from "@components/Icons";
 
 export default function Signup() {
-  const variants = {
-    initial: {
-      x: "100%",
-    },
-    animate: {
-      x: 0,
-    },
-    exit: {
-      x: "100%",
-    },
-  };
+  // const variants = {
+  //   initial: {
+  //     x: "100%",
+  //   },
+  //   animate: {
+  //     x: 0,
+  //   },
+  //   exit: {
+  //     x: "100%",
+  //   },
+  // };
   const handleFormSubmit = async (values: any) => {
     // await loginAction(values, router);
     // isLoggedAction(dispatch);
@@ -23,7 +23,7 @@ export default function Signup() {
   };
 
   return (
-    <MotionLayoutComponent className="flex items-center justify-center" variants={variants} bg="white" title="Authentication | Sign up">
+    <MotionLayoutComponent title="Authentication | Sign up">
       <Form
         form_title="Sign Up"
         has_forgot_link={false}

@@ -1,33 +1,32 @@
 import React from "react";
-// import { motion } from "framer-motion";
-import { Carousel, MotionLayoutComponent } from "@components/common";
 import { motion } from "framer-motion";
 import { Button } from "@components/ui";
 import { useRouter } from "next/router";
+import { Carousel, MotionLayoutComponent } from "@components/common";
 
-const variants = {
-  initial: {
-    x: "100%",
-    transition: {
-      delay: 0,
-      duration: 0.6,
-    },
-  },
-  animate: {
-    x: 0,
-    transition: {
-      delay: 0,
-      duration: 0.6,
-    },
-  },
-  exit: {
-    y: "100%",
-    transition: {
-      delay: 1,
-      duration: 0.6,
-    },
-  },
-};
+// const variants = {
+//   initial: {
+//     x: "100%",
+//     transition: {
+//       delay: 0,
+//       duration: 0.6,
+//     },
+//   },
+//   animate: {
+//     x: 0,
+//     transition: {
+//       delay: 0,
+//       duration: 0.6,
+//     },
+//   },
+//   exit: {
+//     y: "100%",
+//     transition: {
+//       delay: 1,
+//       duration: 0.6,
+//     },
+//   },
+// };
 const textVariants = {
   initial: {
     y: -200,
@@ -84,8 +83,8 @@ const Templates = () => {
   const router = useRouter();
   const [selected, setSelected] = React.useState<number | undefined>(undefined);
   return (
-    <MotionLayoutComponent className="flex flex-col justify-center items-center" variants={variants} title="Choose the right template" bg="black">
-      <motion.h1 className="text-white text-5xl mt-6 sm:text-3xl sm:w-full sm:text-center sm:px-2 sm:pt-2 xm:text-2xl" variants={textVariants}>
+    <MotionLayoutComponent className="flex-col" title="Choose the right template">
+      <motion.h1 className="text-white text-5xl mt-6 sm:text-3xl sm:w-full sm:text-center sm:px-2 sm:pt-2 xm:text-xl" variants={textVariants}>
         Double tap to choose a template
       </motion.h1>
       <Carousel setSelected={setSelected} />
