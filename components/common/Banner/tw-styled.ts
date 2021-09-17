@@ -38,9 +38,13 @@ export const TWBannerElementButton = tw.a`
     md:text-4xl
     items-center
     text-black
+    duration-200
     cursor-pointer
     justify-center
     bg-[#F8E5B5]
+    transition-all
+    hover:bg-[#ffe299]
+
 `
 export const TWBannerCircleArrow = tw(CircleArrowIcon)`
     w-6

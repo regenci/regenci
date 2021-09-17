@@ -7,6 +7,7 @@ import { useMediaQuery } from 'react-responsive'
 import { TWHeroLayout, TWHeroLayoutInner } from './tw-styled'
 
 const ResponsiveHeroNavbar = dynamic(() => import('../../Navbars/Hero/responsive/Navbar'), { ssr: false })
+
 interface IProps {
   title: string
   children: Children
