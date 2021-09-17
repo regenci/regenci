@@ -1,5 +1,6 @@
 export { default as App } from './App'
-export { default as Head } from './Head'
 export { HeroLayout } from './Layouts'
 export { HeroNavbar } from './Navbars'
+export { default as Head } from './Head'
+export { default as Banner } from './Banner'
 export { default as Translate } from './Translate'

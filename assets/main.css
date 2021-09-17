@@ -5,7 +5,10 @@ body,
 #__next {
   overflow: hidden;
   background: white;
-  overscroll-behavior: none;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  outline: none;
   font-family: 'Josefin Sans', sans-serif;
 }
 

@@ -20,8 +20,8 @@ const Navbar: React.FC = () => {
       {links.map((link) => (
         <Link href={link.url} passHref key={nanoid()}>
           <TWHeroResponsiveNavItem className={router.pathname === link.url ? 'text-[#F8E5B5] font-bold' : undefined}>
-            <link.icon className="text-xl" />
-            <div className="text-sm mt-2">{link.text}</div>
+            <link.icon className="text-lg sm:text-xl" />
+            <div className="text-xs sm:text-sm mt-2">{link.text}</div>
           </TWHeroResponsiveNavItem>
         </Link>
       ))}

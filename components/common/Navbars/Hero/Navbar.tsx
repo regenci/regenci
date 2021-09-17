@@ -5,7 +5,14 @@ import { useRouter } from 'next/router'
 import { Translate } from '../../index'
 import { HiTranslate } from 'react-icons/hi'
 import { LogoIcon } from '@app/components/Icons'
-import { TWHeroNav, TWHeroNavRight, TWHeroNavLinks, TWHeroNavLink, TWHeroNavButton } from './tw-styled'
+import {
+  TWHeroNav,
+  TWHeroNavRight,
+  TWHeroNavLinks,
+  TWHeroNavLink,
+  TWHeroNavButton,
+  TWHeroNavLogoWrapper,
+} from './tw-styled'
 
 const Navbar: React.FC = () => {
   const router = useRouter()
@@ -19,7 +26,11 @@ const Navbar: React.FC = () => {
 
   return (
     <TWHeroNav>
-      <LogoIcon />
+      <Link href="/" passHref>
+        <TWHeroNavLogoWrapper>
+          <LogoIcon />
+        </TWHeroNavLogoWrapper>
+      </Link>
       <TWHeroNavRight>
         <TWHeroNavLinks>
           {links.map((link) => (

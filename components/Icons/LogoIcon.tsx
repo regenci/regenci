@@ -2,7 +2,7 @@ import React, { SVGAttributes } from 'react'
 
 const LogoIcon = ({ ...props }: SVGAttributes<SVGElement>) => {
   return (
-    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="40" height="43" fill="none" viewBox="0 0 44 47">
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 44 47">
       <path
         stroke="#000"
         strokeWidth="2"

@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components'
 
-export const TWDropdown = 'relative ml-5'
+export const TWDropdown = 'relative md:ml-5'
 export const TWDropdownButton = `
     flex
     text-xl
@@ -21,7 +21,7 @@ export const TWDropdownButton = `
     after:duration-300
     after:bg-[#ffe299] 
     after:transition-all`
-export const TWDropdownPanel = 'mt-10 absolute top-0 left-1/2 transform bg-white shadow-md -translate-x-1/2'
+export const TWDropdownPanel = 'mt-10 absolute top-0 left-1/2 transform bg-white shadow-md -translate-x-1/2 z-[1]'
 export const TWDropdownPanelInner = tw.div`
     py-1
     flex

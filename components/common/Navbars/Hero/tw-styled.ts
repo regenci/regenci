@@ -3,14 +3,20 @@ import tw from 'tailwind-styled-components'
 export const TWHeroNav = tw.nav`
     flex
     h-12
-    mt-6
     w-full
     items-center
     justify-between
 `
+export const TWHeroNavLogoWrapper = tw.a`
+    w-7
+    h-7
+    md:w-9
+    md:h-9
+    duration-300
+    transition-all
+`
 export const TWHeroNavRight = tw.div`
-    hidden
-    md:flex
+    flex
     items-center
 `
 export const TWHeroNavLinks = tw.div`
@@ -49,6 +55,7 @@ export const TWHeroNavDivider = tw.div`
 export const TWHeroNavButton = tw.a`
     flex
     ml-5
+    pt-1
     text-lg
     h-[35px]
     w-[150px]
