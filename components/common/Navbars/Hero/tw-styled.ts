@@ -44,7 +44,7 @@ export const TWHeroNavLink = tw.a`
     after:duration-300
     after:bg-[#ffe299]
     after:transition-all
-    hover:after:bg-bg-[#ffe299]
+    hover:after:bg-[#ffe299]
 `
 export const TWHeroNavDivider = tw.div`
     w-[2px]
