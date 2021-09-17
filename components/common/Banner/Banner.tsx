@@ -15,13 +15,15 @@ import { useMediaQuery } from 'react-responsive'
 const BannerTextIcon = dynamic(() => import('@app/components/Icons/BannerTextIcon'), { ssr: false })
 const BannerTextResponsiveIcon = dynamic(() => import('@app/components/Icons/BannerTextResponsiveIcon'), { ssr: false })
 
-const Banner = () => {
+const Banner: React.FC = () => {
+  const [hovered, setHovered] = React.useState<boolean>(false)
+
   const md = useMediaQuery({ maxWidth: 768 })
   return (
     <TWBanner>
       <TWBannerBigTextElement>{md ? <BannerTextResponsiveIcon /> : <BannerTextIcon />}</TWBannerBigTextElement>
-      <TWBannerElementButton>
-        Get your resume <TWBannerCircleArrow />
+      <TWBannerElementButton onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+        Get your resume <TWBannerCircleArrow hovered={hovered} />
       </TWBannerElementButton>
       <TWBannerInner>
         <TWBannerSmallTextWrapper>
