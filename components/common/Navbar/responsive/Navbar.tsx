@@ -10,7 +10,6 @@ const Navbar: React.FC = () => {
 
   const links = [
     { url: '/', icon: HiOutlineHome, text: 'Home' },
-    { url: '/templates', icon: HiOutlineTemplate, text: 'Templates' },
     { url: '/faq', icon: HiOutlineQuestionMarkCircle, text: 'Faq' },
     { url: '/authentication/sign-in', icon: HiLogin, text: 'Sign in' },
   ]

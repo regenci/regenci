@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components'
 
-export const TWHeroLayout = tw.div`
+export const TWDefaultLayout = tw.div`
     pt-5
     w-full
     h-full
@@ -17,7 +17,7 @@ export const TWHeroLayout = tw.div`
     overflow-hidden
     transition-[padding]
 `
-export const TWHeroLayoutInner = tw.div`
+export const TWDefaultLayoutInner = tw.div`
     flex
     mb-12
     pb-12

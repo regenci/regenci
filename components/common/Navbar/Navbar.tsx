@@ -19,7 +19,6 @@ const Navbar: React.FC = () => {
 
   const links = [
     { url: '/', text: 'Home', component: TWHeroNavLink },
-    { url: '/templates', text: 'Templates', component: TWHeroNavLink },
     { url: '/faq', text: 'Faq', component: TWHeroNavLink },
     { url: '/authentication/sign-in', text: 'Sign in', component: TWHeroNavButton },
   ]

@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import {
   TWBanner,
@@ -22,9 +23,11 @@ const Banner: React.FC = () => {
   return (
     <TWBanner>
       <TWBannerBigTextElement>{md ? <BannerTextResponsiveIcon /> : <BannerTextIcon />}</TWBannerBigTextElement>
-      <TWBannerElementButton onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-        Get your resume <TWBannerCircleArrow hovered={hovered} />
-      </TWBannerElementButton>
+      <Link href="/authentication/sign-in" passHref>
+        <TWBannerElementButton onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+          Get your resume <TWBannerCircleArrow hovered={hovered} />
+        </TWBannerElementButton>
+      </Link>
       <TWBannerInner>
         <TWBannerSmallTextWrapper>
           <TWBannerSmallTextHeading>We believe in simplicity.</TWBannerSmallTextHeading>

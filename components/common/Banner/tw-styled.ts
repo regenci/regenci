@@ -57,8 +57,9 @@ export const TWBannerCircleArrow = tw(CircleArrowIcon)`
 `
 export const TWBannerSmallTextWrapper = tw.div`
     flex
-    mt-5
+    mt-8
     w-full
+    md:mt-5
     flex-col
     text-right
     md:w-[500px]

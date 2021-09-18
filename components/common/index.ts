@@ -1,6 +1,6 @@
 export { default as App } from './App'
 export { default as Head } from './Head'
-export { DefaultLayout } from './Layouts'
 export { default as Banner } from './Banner'
 export { default as Translate } from './Translate'
+export { DefaultLayout, AuthLayout } from './Layouts'
 export { default as Navbar, ResponsiveNavbar } from './Navbar'

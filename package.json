@@ -12,10 +12,12 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
+    "antd": "^4.16.13",
     "classnames": "^2.3.1",
     "framer-motion": "^4.1.17",
     "nanoid": "^3.1.25",
     "next": "11.1.2",
+    "next-plugin-antd-less": "^1.4.3",
     "next-seo": "^4.26.0",
     "nextjs-progressbar": "^0.0.11",
     "react": "17.0.2",
@@ -25,11 +27,13 @@
     "tailwind-styled-components": "^2.0.3"
   },
   "devDependencies": {
+    "@types/antd": "^1.0.0",
     "@types/nanoid": "^3.0.0",
     "@types/next-seo": "^2.1.2",
     "@types/react": "17.0.21",
     "@types/react-responsive": "^8.0.3",
     "autoprefixer": "^10.3.4",
+    "babel-plugin-import": "^1.13.3",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
     "husky": "^7.0.0",
