@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { nanoid } from 'nanoid'
 import { useRouter } from 'next/router'
-import { Translate } from '../../index'
+import { Translate } from '../index'
 import { HiTranslate } from 'react-icons/hi'
 import { LogoIcon } from '@app/components/Icons'
 import {

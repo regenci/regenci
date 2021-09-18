@@ -1,12 +1,12 @@
 import React from 'react'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
-import { HeroNavbar } from '../../Navbars'
+import { Navbar } from '../../index'
 import { Children } from '@app/typings/other'
 import { useMediaQuery } from 'react-responsive'
 import { TWHeroLayout, TWHeroLayoutInner } from './tw-styled'
 
-const ResponsiveHeroNavbar = dynamic(() => import('../../Navbars/Hero/responsive/Navbar'), { ssr: false })
+const ResponsiveNavbar = dynamic(() => import('../../Navbar/responsive/Navbar'), { ssr: false })
 
 interface IProps {
   title: string
@@ -22,9 +22,9 @@ const Layout: React.FC<IProps> = ({ title, children }: IProps) => {
         <title>{title} | Resume Agenci</title>
       </Head>
       <TWHeroLayout>
-        <HeroNavbar />
+        <Navbar />
         <TWHeroLayoutInner>{children}</TWHeroLayoutInner>
-        {md && <ResponsiveHeroNavbar />}
+        {md && <ResponsiveNavbar />}
       </TWHeroLayout>
     </>
   )

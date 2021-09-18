@@ -1,1 +1,1 @@
-export { default as HeroLayout } from './Hero'
+export { default as DefaultLayout } from './Default'

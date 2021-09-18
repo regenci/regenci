@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
-import { Banner, HeroLayout } from '@app/components/common'
+import { Banner, DefaultLayout } from '@app/components/common'
 
 const Home: NextPage = () => {
   return (
-    <HeroLayout title="Homepage">
+    <DefaultLayout title="Homepage">
       <Banner />
-    </HeroLayout>
+    </DefaultLayout>
   )
 }
 
