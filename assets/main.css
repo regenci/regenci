@@ -9,7 +9,7 @@ body,
   height: 100vh;
   min-height: 100vh;
   outline: none;
-  font-family: 'Josefin Sans', sans-serif;
+  /* font-family: 'Josefin Sans', sans-serif; */
 }
 
 @tailwind base;

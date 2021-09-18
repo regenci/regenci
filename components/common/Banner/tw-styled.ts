@@ -27,7 +27,7 @@ export const TWBannerBigTextElement = tw(motion.div)`
 `
 export const TWBannerElementButton = tw.a`
     flex
-    mt-7
+    mt-8
     h-10
     w-full
     sm:h-16

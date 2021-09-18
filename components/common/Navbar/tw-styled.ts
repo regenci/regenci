@@ -55,7 +55,6 @@ export const TWHeroNavDivider = tw.div`
 export const TWHeroNavButton = tw.a`
     flex
     ml-5
-    pt-1
     text-lg
     h-[35px]
     w-[150px]
