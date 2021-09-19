@@ -11,7 +11,7 @@ export const TWBanner = tw.div`
     md:mt-0
     md:items-start
 `
-export const TWBannerInner = tw.div`
+export const TWBannerInner = tw(motion.div)`
     flex
     mt-5
     w-full
@@ -25,7 +25,7 @@ export const TWBannerBigTextElement = tw(motion.div)`
     items-center
     xl:w-[1000px]
 `
-export const TWBannerElementButton = tw.a`
+export const TWBannerElementButton = tw(motion.a)`
     flex
     mt-8
     h-10

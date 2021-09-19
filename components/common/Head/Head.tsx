@@ -9,6 +9,7 @@ const Head: React.FC = () => {
       <DefaultSeo {...SEO} />
       <NextHead>
         <meta charSet="utf-8" />
+        <link rel="icon" href="/logo.svg" />
       </NextHead>
     </>
   )

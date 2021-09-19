@@ -20,15 +20,29 @@ const Banner: React.FC = () => {
   const [hovered, setHovered] = React.useState<boolean>(false)
 
   const md = useMediaQuery({ maxWidth: 768 })
+  React.useEffect(() => {
+    if (md) setHovered(true)
+    return () => setHovered(false)
+  }, [md])
   return (
     <TWBanner>
       <TWBannerBigTextElement>{md ? <BannerTextResponsiveIcon /> : <BannerTextIcon />}</TWBannerBigTextElement>
       <Link href="/authentication/sign-in?getStarted=true" passHref>
-        <TWBannerElementButton onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+        <TWBannerElementButton
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.5 }}
+        >
           Get your resume <TWBannerCircleArrow hovered={hovered} />
         </TWBannerElementButton>
       </Link>
-      <TWBannerInner>
+      <TWBannerInner
+        initial={{ opacity: 0, skewX: 7, x: 300 }}
+        animate={{ opacity: 1, skewX: 0, x: 0 }}
+        transition={{ duration: 1, delay: 2 }}
+      >
         <TWBannerSmallTextWrapper>
           <TWBannerSmallTextHeading>We believe in simplicity.</TWBannerSmallTextHeading>
           <TWBannerSmallTextDescription>

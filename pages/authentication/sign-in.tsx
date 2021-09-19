@@ -10,14 +10,12 @@ import { email_rule, max_characters_rule, min_characters_rule, required_rule } f
 const Index = () => {
   const router = useRouter()
   const { getStarted } = router.query
-  console.log(getStarted)
 
   React.useEffect(() => {
     if (getStarted)
       return Notification({
         type: 'info',
         description: 'It might be annoying, but we really need you to create an account so we can save your data.',
-        infinite: true,
       })
   }, [getStarted])
 

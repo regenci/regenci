@@ -23,7 +23,7 @@ const Layout: React.FC<IProps> = ({ title, children }: IProps) => {
   return (
     <>
       <Head>
-        <title>{title} | Authentication Resume Agenci</title>
+        <title>{title} - Resume Agenci</title>
       </Head>
       <TWAuthLayout>
         <TWAuthLayoutSider>
