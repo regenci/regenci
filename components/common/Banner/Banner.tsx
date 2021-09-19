@@ -23,7 +23,7 @@ const Banner: React.FC = () => {
   return (
     <TWBanner>
       <TWBannerBigTextElement>{md ? <BannerTextResponsiveIcon /> : <BannerTextIcon />}</TWBannerBigTextElement>
-      <Link href="/authentication/sign-in" passHref>
+      <Link href="/authentication/sign-in?getStarted=true" passHref>
         <TWBannerElementButton onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
           Get your resume <TWBannerCircleArrow hovered={hovered} />
         </TWBannerElementButton>

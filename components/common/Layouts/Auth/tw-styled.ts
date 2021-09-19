@@ -20,11 +20,10 @@ export const TWAuthLayoutSider = tw.section`
     md:w-1/3
     items-center
     justify-between
-    md:items-center
 `
 export const TWAuthLayoutTranslateWrapper = tw.div`
-    top-10
-    right-20
+    md:top-10
+    md:right-20
     md:absolute
 `
 export const TWAuthLayoutSiderLogoWrapper = tw.a`
@@ -50,7 +49,7 @@ export const TWAuthLayoutSiderLogoWrapper = tw.a`
 `
 export const TWAuthLayoutMain = tw.section`
     px-4
-    my-auto
+    h-full
     md:px-0
     md:flex
     md:w-2/3
@@ -59,11 +58,12 @@ export const TWAuthLayoutMain = tw.section`
 `
 export const TWAuthLayoutMainInner = tw.div`
     py-4
+    mt-10
     w-full
     mx-auto
-    my-auto
     md:py-9
     max-w-sm
     min-w-min
     md:w-7/12
+    md:my-auto
 `

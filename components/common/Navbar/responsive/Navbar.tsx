@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { nanoid } from 'nanoid'
 import { useRouter } from 'next/router'
 import { TWHeroResponsiveNav, TWHeroResponsiveNavItem } from './tw-styled'
-import { HiLogin, HiOutlineHome, HiOutlineQuestionMarkCircle, HiOutlineTemplate } from 'react-icons/hi'
+import { HiLogin, HiOutlineHome, HiOutlineQuestionMarkCircle } from 'react-icons/hi'
 
 const Navbar: React.FC = () => {
   const router = useRouter()

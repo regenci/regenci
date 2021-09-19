@@ -24,7 +24,10 @@ const Index = () => {
         onFinish={(values: SignUp) => console.log(values)}
         form_extra_stuff={
           <>
-            New here? - <Link href="/authentication/sign-in">Sign in</Link>
+            New here? -{' '}
+            <Link href="/authentication/sign-in">
+              <a className="hover:underline">Sign in</a>
+            </Link>
           </>
         }
       >

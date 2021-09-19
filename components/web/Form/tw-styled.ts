@@ -12,6 +12,12 @@ export const TWFormTitle = tw.div`
     text-xl
     md:text-2xl
 `
+export const TWFormDescription = tw.div`
+    mb-3.5
+    text-xs
+    md:text-sm
+    text-gray-500
+`
 export const TWFormButton = tw(Button)`
     w-full
 `
