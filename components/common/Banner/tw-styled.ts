@@ -44,7 +44,6 @@ export const TWBannerElementButton = tw.a`
     bg-[#F8E5B5]
     transition-all
     hover:bg-[#ffe299]
-
 `
 export const TWBannerCircleArrow = tw(CircleArrowIcon)`
     w-6

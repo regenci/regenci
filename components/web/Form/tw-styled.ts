@@ -8,7 +8,7 @@ export const TWForm = tw(Form)`
     md:w-[500px]
 `
 export const TWFormTitle = tw.div`
-    mb-5
+    mb-3.5
     text-xl
     md:text-2xl
 `

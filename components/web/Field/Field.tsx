@@ -11,7 +11,7 @@ interface IProps extends FormItemProps {
 const Field: React.FC<IProps> = ({ field_icon, is_password_field, ...props }: IProps) => {
   if (is_password_field)
     return (
-      <Form.Item {...props} className="w-full">
+      <Form.Item {...props} className="w-full !mb-2.5 md:!mb-6">
         <Input.Password
           type="password"
           prefix={field_icon}
@@ -22,7 +22,7 @@ const Field: React.FC<IProps> = ({ field_icon, is_password_field, ...props }: IP
     )
 
   return (
-    <Form.Item {...props} style={{ width: '100%' }}>
+    <Form.Item {...props} className="w-full !mb-2.5 md:!mb-6">
       <Input type="text" prefix={field_icon} placeholder={props.label as string} />
     </Form.Item>
   )

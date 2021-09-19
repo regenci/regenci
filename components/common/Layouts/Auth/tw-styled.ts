@@ -2,6 +2,7 @@ import tw from 'tailwind-styled-components'
 
 export const TWAuthLayout = tw.main`
     flex
+    h-full
     flex-col
     md:h-screen
     overflow-hidden
@@ -10,12 +11,21 @@ export const TWAuthLayout = tw.main`
 export const TWAuthLayoutSider = tw.section`
     flex
     px-4
+    mt-3
     w-full
+    md:mt-0
     mx-auto
     md:px-0
+    relative
     md:w-1/3
-    items-start
+    items-center
+    justify-between
     md:items-center
+`
+export const TWAuthLayoutTranslateWrapper = tw.div`
+    top-10
+    right-20
+    md:absolute
 `
 export const TWAuthLayoutSiderLogoWrapper = tw.a`
     flex
@@ -40,6 +50,7 @@ export const TWAuthLayoutSiderLogoWrapper = tw.a`
 `
 export const TWAuthLayoutMain = tw.section`
     px-4
+    my-auto
     md:px-0
     md:flex
     md:w-2/3
