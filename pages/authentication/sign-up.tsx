@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 import { Col, Row } from 'antd'
-import { Form, Field } from '@app/components/web'
 import { AuthLayout } from '@app/components/common'
-import { SignUp } from '@app/typings/authentication'
+import { SignUpForm } from '@app/typings/authentication'
+import { Form, Field, Notification } from '@app/components/web'
 import { HiOutlineAtSymbol, HiOutlineLockClosed, HiOutlineUser } from 'react-icons/hi'
 import {
   email_rule,
@@ -13,15 +13,41 @@ import {
   min_characters_rule,
   letters_and_spaces_rule,
 } from '@app/lib'
+import { signUpReq } from '@app/requests'
+import { setRegisterSlice } from '@app/store/features'
+import { useAppDispatch } from '@app/store/hooks'
+import { useRouter } from 'next/router'
 
 const Index = () => {
+  const router = useRouter()
+  const dispatch = useAppDispatch()
+  const [loading, setLoading] = React.useState<boolean>(false)
+
+  const onFormSubmit = async (values: SignUpForm) => {
+    setLoading(true)
+    const { confirm_password, ...rest } = values
+    try {
+      const response = await signUpReq({ ...rest })
+      if (response.data) {
+        setLoading(false)
+        Notification({ type: 'success', description: response.data.message })
+        dispatch(setRegisterSlice(response.data.decription_key))
+        router.push('/authentication/account-activation')
+      }
+    } catch (error: any) {
+      Notification({ type: 'error', description: error.response.data.message })
+      setLoading(false)
+    }
+  }
+
   return (
     <AuthLayout title="Sign up">
       <Form
+        is_submitting={loading}
         layout="vertical"
         form_title="Sign up"
         form_button_title="Sign up"
-        onFinish={(values: SignUp) => console.log(values)}
+        onFinish={(values: SignUpForm) => onFormSubmit(values)}
         form_extra_stuff={
           <>
             New here? -{' '}

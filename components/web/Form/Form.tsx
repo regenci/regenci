@@ -4,6 +4,7 @@ import { TWForm, TWFormButton, TWFormDescription, TWFormExtra, TWFormTitle } fro
 
 interface IProps extends FormProps {
   form_title: string
+  is_submitting?: boolean
   form_button_title: string
   form_description?: string
   form_extra_stuff?: JSX.Element
@@ -12,6 +13,7 @@ interface IProps extends FormProps {
 const Form: React.FC<IProps> = ({
   children,
   form_title,
+  is_submitting,
   form_extra_stuff,
   form_description,
   form_button_title,
@@ -22,7 +24,7 @@ const Form: React.FC<IProps> = ({
       <TWFormTitle>{form_title}</TWFormTitle>
       {form_description && <TWFormDescription>{form_description}</TWFormDescription>}
       {children}
-      <TWFormButton htmlType="submit" type="primary">
+      <TWFormButton htmlType="submit" type="primary" loading={is_submitting ?? undefined}>
         {form_button_title}
       </TWFormButton>
       {form_extra_stuff && <TWFormExtra>{form_extra_stuff}</TWFormExtra>}

@@ -48,7 +48,7 @@ const Index = () => {
           field_icon={<HiOutlineLockClosed />}
           rules={[required_rule(true), max_characters_rule(30), min_characters_rule(4)]}
         />
-        <div className="mb-3 -mt-3">
+        <div className="mb-3 md:-mt-3">
           <Link href="/authentication/forgot-password">
             <a className="hover:underline">Forgot password</a>
           </Link>
